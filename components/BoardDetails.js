@@ -35,8 +35,10 @@ const BoardDetails = ({ task }) => {
           id="status"
           onChange={e => updateStatus(e, id)}
         >
-          {selection.map(item => (
-            <option value={item.value}>{item.label}</option>
+          {selection.map((item, index) => (
+            <option value={item.value} key={index}>
+              {item.label}
+            </option>
           ))}
         </select>
       </form>
